@@ -48,7 +48,7 @@ struct CellView: View {
     
     var body: some View {
         Rectangle()
-            .foregroundColor(cell.visited ? .blue : .green)
+            .foregroundColor(cell.onPath ? .yellow : (cell.visited ? .blue : .green))
             .frame(minWidth: 40, minHeight: 40)
             .border(Color.gray, width: 1)
     }

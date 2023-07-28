@@ -10,6 +10,8 @@ import Foundation
 struct Node: Identifiable {
     var id : Point
     var visited: Bool = false
+    var distance:Int?
+    var onPath = false
 }
 
 struct Point: Hashable {
