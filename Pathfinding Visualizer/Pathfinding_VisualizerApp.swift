@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Pathfinding_VisualizerApp: App {
+    var vM = ViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PathfindingVisualizer(viewModel: vM)
         }
     }
 }
