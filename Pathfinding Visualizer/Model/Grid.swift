@@ -9,18 +9,18 @@ import Foundation
 
 struct Grid: Identifiable {
     var id = UUID()
-    var width: Int
-    var height: Int
+    var row: Int
+    var col: Int
     var cells: [[Node]]
-
-    init(width: Int, height: Int) {
-            self.width = width
-            self.height = height
-            self.cells = Array(repeating: Array(repeating: Node(coord: Coordinate(x: 0, y: 0)), count: height), count: width)
-            for x in 0..<width {
-                for y in 0..<height {
-                    cells[x][y] = Node(coord: Coordinate(x: x, y: y))
-                }
+    
+    init(row: Int, col: Int) {
+        self.row = row
+        self.col = col
+        self.cells = Array(repeating: Array(repeating: Node(coord: Coordinate(row: 0, col: 0)), count: col), count: row)
+        for x in 0..<row {
+            for y in 0..<col {
+                cells[x][y] = Node(coord: Coordinate(row: x, col: y))
             }
         }
+    }
 }

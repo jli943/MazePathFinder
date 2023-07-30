@@ -19,6 +19,10 @@ struct PathfindingVisualizer: View {
                     viewModel.startSearch()
                 }
                 Spacer()
+                Button("ShortestWay"){
+                    viewModel.findShortestWay()
+                }
+                Spacer()
                 Picker("Algorithm", selection: $viewModel.algorithm) {
                     ForEach(viewModel.algorithms, id: \.self) { algorithm in
                         Text(algorithm.name)
