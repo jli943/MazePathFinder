@@ -7,13 +7,17 @@
 
 import Foundation
 
-enum Algorithm {
-    case bfs
+enum Algorithm: Identifiable {
+    
+    var id: Algorithm { self }
+    case bfs,dfs
     
     var name: String {
             switch self {
             case .bfs:
                 return "BFS"
+            case .dfs:
+                return "DFS"
             }
         }
 }

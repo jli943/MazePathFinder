@@ -47,36 +47,29 @@ struct GridView: View {
     }
 }
 
-//struct CellView: View {
-//    var cell: Node
-//
-//    var body: some View {
-//        Rectangle()
-//            .foregroundColor(cell.onPath ? .yellow : ((cell.distance != nil) ? .blue : .green))
-//            .frame(minWidth: 40, minHeight: 40)
-//            .border(Color.gray, width: 1)
-//    }
-//}
 
 struct CellView: View {
     var cell: Node
-    @State private var cellColor: Color = .green
+    @State private var cellColor: Color = .white
     
     var body: some View {
         Rectangle()
             .foregroundColor(cellColor)
             .frame(minWidth: 40, minHeight: 40)
             .border(Color.gray, width: 1)
+            .onChange(of: cell.isBarrier){
+                cellColor = $0 ? .black : .white
+            }
             .onChange(of: cell.distance) { distance in
                 if let cellDistance = distance {
                     print(cellDistance)
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 150)) {
-                        withAnimation(.linear(duration: 0.5)) {
-                            cellColor =  .blue
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            cellColor =  .cyan
                         }
                     }
                 } else{
-                    cellColor = .green
+                    cellColor = .white
                 }
             }
             .onChange(of: cell.onPath) { path in

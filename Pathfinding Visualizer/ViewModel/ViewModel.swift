@@ -8,12 +8,16 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published var grid: Grid = Grid(row: 25, col:20)
-    @Published var startPoint = Coordinate(row: 0, col: 0)
-    @Published var targetPoint = Coordinate(row: 23, col: 19)
+    @Published var grid: Grid = Grid(row: 30, col:25)
+    @Published var startPoint = Coordinate(row: 9, col: 11)
+    @Published var targetPoint = Coordinate(row: 21, col: 2)
     @Published var algorithm: Algorithm = .bfs
+    @Published var maze: Maze = .oneBarrier
     
-    let algorithms: [Algorithm] = [.bfs]
+    
+    let mazes:[Maze] = [.oneBarrier]
+    let algorithms: [Algorithm] = [.bfs, .dfs]
+    var barrierSet: Set<Coordinate> = []
     
     func resetGrid() {
         for x in 0..<grid.row {
@@ -21,22 +25,33 @@ class ViewModel: ObservableObject {
                 grid.cells[x][y].distance = nil
 //                grid.cells[x][y].visited = false
                 grid.cells[x][y].onPath = false
+                grid.cells[x][y].isBarrier = false
             }
         }
     }
     
+    func chooseMaze(){
+        switch maze{
+        case .oneBarrier:
+            self.setOneBarrier()
+        }
+    }
+    
     func startSearch(){
-        resetGrid()
         switch algorithm {
         case .bfs:
 
                 self.bfs(startCoord: self.startPoint, targetCoord: self.targetPoint)
+        case .dfs: break
+            
         }
     }
     func findShortestWay(){
         switch algorithm {
         case .bfs:
                 self.shortestPathBfs(startCoord: self.startPoint, targetCoord: self.targetPoint)
+        case .dfs:
+            break
         }
     }
 

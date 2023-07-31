@@ -24,7 +24,7 @@ extension ViewModel{
             }
             
             for neighborCoord in currentCoord.neighborCoords(in: grid) {
-                if !needVisited.contains(neighborCoord){
+                if !needVisited.contains(neighborCoord), !barrierSet.contains(neighborCoord){
                     needVisited.insert(neighborCoord)
                     queue.append((coord: neighborCoord, distance: currentDistance + 1))
                 }

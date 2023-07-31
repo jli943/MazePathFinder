@@ -13,6 +13,7 @@ struct Node: Identifiable {
 //    var visited: Bool = false
     var distance: Int?
     var onPath = false
+    var isBarrier = false
 }
 
 struct Coordinate: Hashable {

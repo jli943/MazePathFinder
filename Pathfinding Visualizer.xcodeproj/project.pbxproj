@@ -17,6 +17,8 @@
 		66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343CE2A72ECAD00743311 /* ViewModel.swift */; };
 		66D343F32A72F55500743311 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343F22A72F55500743311 /* GridView.swift */; };
 		66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343F42A72F7FF00743311 /* Algorithm.swift */; };
+		66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AC2A7746E10055F343 /* Maze.swift */; };
+		66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		66D343CE2A72ECAD00743311 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		66D343F22A72F55500743311 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		66D343F42A72F7FF00743311 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		66FEE7AC2A7746E10055F343 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
+		66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				66D343CA2A72EC3D00743311 /* Node.swift */,
 				66D343CC2A72EC5400743311 /* Grid.swift */,
 				66D343F42A72F7FF00743311 /* Algorithm.swift */,
+				66FEE7AC2A7746E10055F343 /* Maze.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			children = (
 				66D343CE2A72ECAD00743311 /* ViewModel.swift */,
 				6670EF602A74501E0061E39F /* BFS.swift */,
+				66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 			files = (
 				66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */,
 				66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */,
+				66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */,
+				66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
 				66D343BC2A72E7C100743311 /* PathfindingVisualizer.swift in Sources */,
 				66D343BA2A72E7C100743311 /* Pathfinding_VisualizerApp.swift in Sources */,
