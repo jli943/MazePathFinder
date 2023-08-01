@@ -24,6 +24,11 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 
 3. ViewModel: Acts as an intermediary between the Model and the View. It holds the app's state and data that needs to be displayed on the UI. It also communicates with the Model to fetch data and update it based on user interactions. In this app, it includes ViewModel of Grid/Details of AlgoMaze/Details of AlgoSearch.
 
+## Demo
+
+![MazePathFinder Demo]([https://raw.githubusercontent.com/your-username/repo-name/master/path/to/gif.gif](https://github.com/jli943/MazePathFinder/blob/main/Photos/Simulator%20Screen%20Recording%20-%20iPad%20Pro%20(12.9-inch)%20(6th%20generation)%20-%202023-08-01%20at%2014.42.00.gif))
+
+
 ## Maze Generation (AlgoMaze)
 
 ### Depth-First Search (DFS) Algorithm
