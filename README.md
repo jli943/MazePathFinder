@@ -26,7 +26,7 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 
 ## Demo
 
-![MazePathFinder Demo](Photos/Demo.gif)
+![MazePathFinder Demo](https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif)
 
 
 ## Maze Generation (AlgoMaze)
