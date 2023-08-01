@@ -10,12 +10,12 @@ import Foundation
 enum Maze: Identifiable {
     
     var id: Maze { self }
-    case oneBarrier
+    case dFSMaze
     
     var name: String {
             switch self {
-            case .oneBarrier:
-                return "oneBarrier"
+            case .dFSMaze:
+                return "DfsMaze"
             }
         }
 }

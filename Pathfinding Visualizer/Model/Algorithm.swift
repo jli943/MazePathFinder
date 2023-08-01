@@ -15,7 +15,7 @@ enum Algorithm: Identifiable {
     var name: String {
             switch self {
             case .bfs:
-                return "BFS"
+                return "BfsSearch"
             case .dfs:
                 return "DFS"
             }

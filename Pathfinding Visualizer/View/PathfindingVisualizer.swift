@@ -11,25 +11,41 @@ struct PathfindingVisualizer: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 5) {
             
-            HStack(spacing: 100) {
-                // Start Button
-                Button("Start") {
-                    withAnimation {
-                        viewModel.startSearch()
+            HStack(spacing: 50) {
+                Menu {
+                    ForEach(viewModel.mazes) { maze in
+                        Button(action: {
+                            viewModel.maze = maze
+                            viewModel.chooseMaze()
+                        })
+                        {
+                            Text(maze.name)
+                                .font(.headline)
+                        }
                     }
-                }
-                .buttonStyle(CustomButtonStyle(color: .cyan))
-                
-                // Find Path Button
-                Button("Find Path") {
-                    withAnimation {
-                        viewModel.findShortestWay()
+                } label: {
+                    HStack {
+                        if let maze = viewModel.maze {
+                            Text("\(maze.name)")
+                                .foregroundColor(.white)
+                                .bold()
+                        } else{
+                            Text("AlgoMaze")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.white)
+                            .font(Font.system(size: 14).weight(.bold))
                     }
+                    .padding(12)
+                    .font(.title)
+                    .background(.orange)
+                    .cornerRadius(8)
+                    .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 0, y: 2)
                 }
-                .buttonStyle(CustomButtonStyle(color: .yellow))
-                
                 
                 Menu {
                     ForEach(viewModel.algorithms) { algorithm in
@@ -37,41 +53,21 @@ struct PathfindingVisualizer: View {
                             viewModel.algorithm = algorithm
                         }) {
                             Text(algorithm.name)
-    
-                        }
-                    }
-                } label: {
-                    HStack {
-                        Text("\(viewModel.algorithm.name)")
-                            .foregroundColor(.white)
-                            .bold()
-                        Image(systemName: "chevron.down")
-                            .foregroundColor(.white)
-                            .font(Font.system(size: 14).weight(.bold))
-                    }
-                    .padding(12)
-                    .font(.title)
-                    .background(.green)
-                    .cornerRadius(8)
-                    .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 0, y: 2)
-                }
-                
-                Menu {
-                    ForEach(viewModel.mazes) { maze in
-                        Button(action: {
-                            viewModel.maze = maze
-                            viewModel.chooseMaze()
                             
-                        }) {
-                            Text(maze.name)
-    
                         }
                     }
                 } label: {
                     HStack {
-                        Text("\(viewModel.maze.name)")
-                            .foregroundColor(.white)
-                            .bold()
+                        if let algorithm = viewModel.algorithm{
+                            Text("\(algorithm.name)")
+                                .foregroundColor(.white)
+                                .bold()
+                        }else{
+                            Text("AlgoSearch")
+                                .foregroundColor(.white)
+                                .bold()
+                            
+                        }
                         Image(systemName: "chevron.down")
                             .foregroundColor(.white)
                             .font(Font.system(size: 14).weight(.bold))
@@ -84,6 +80,21 @@ struct PathfindingVisualizer: View {
                 }
                 
                 
+                // Start Button
+                Button("Search") {
+                    withAnimation {
+                        viewModel.startSearch()
+                    }
+                }
+                .buttonStyle(CustomButtonStyle(color: .cyan))
+                
+                // Find Path Button
+                Button("ShortPath") {
+                    withAnimation {
+                        viewModel.findShortestWay()
+                    }
+                }
+                .buttonStyle(CustomButtonStyle(color: .yellow))
                 
                 // Reset Button
                 Button("Reset") {

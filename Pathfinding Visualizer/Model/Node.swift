@@ -38,7 +38,24 @@ struct Coordinate: Hashable {
                 neighbors.append(coord)
             }
         }
-        return neighbors
+        return neighbors.shuffled()
+    }
+    
+    func neighborCoordsInMaze(in grid: Grid) -> [Coordinate]{
+        var neighborsInMaze: [Coordinate] = []
+        let candidateCoords = [
+            Coordinate(row: row - 2, col: col),
+            Coordinate(row: row + 2, col: col),
+            Coordinate(row: row, col: col - 2),
+            Coordinate(row: row, col: col + 2)
+        ]
+        
+        for coord in candidateCoords {
+            if coord.isValidCoord(in: grid) {
+                neighborsInMaze.append(coord)
+            }
+        }
+        return neighborsInMaze.shuffled()
     }
 }
 

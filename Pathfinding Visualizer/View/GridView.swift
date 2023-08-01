@@ -63,7 +63,7 @@ struct CellView: View {
             .onChange(of: cell.distance) { distance in
                 if let cellDistance = distance {
                     print(cellDistance)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 150)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 50)) {
                         withAnimation(.easeInOut(duration: 0.5)) {
                             cellColor =  .cyan
                         }
@@ -74,7 +74,7 @@ struct CellView: View {
             }
             .onChange(of: cell.onPath) { path in
                 if path {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cell.distance! * 100)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cell.distance! * 50)) {
                         withAnimation(.linear(duration: 0.5)) {
                             cellColor =  .yellow
                         }
