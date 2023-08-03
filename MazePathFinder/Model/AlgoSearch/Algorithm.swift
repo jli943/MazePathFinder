@@ -10,14 +10,17 @@ import Foundation
 enum Algorithm: Identifiable {
     
     var id: Algorithm { self }
-    case bfs,dij
+    case bfs,dij,dfs
     
     var name: String {
             switch self {
             case .bfs:
-                return "BfsSearch"
+                return "BFS"
+            case .dfs:
+                return "DFS"
             case .dij:
-                return "DijkstraSearch"
+                return "Dijkstra"
             }
+        
         }
 }

@@ -16,8 +16,8 @@ class ViewModel: ObservableObject{
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
-    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij]
-    let mazeMenu:[Maze] = [.dFSMaze, .weightMaze]
+    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs]
+    let mazeMenu:[Maze] = [.unweightMaze, .weightMaze]
     
     func ResetGraph(){
         grid.resetGrid()
@@ -27,10 +27,10 @@ class ViewModel: ObservableObject{
     
     func chooseMaze(){
         grid.resetMaze()
-        grid.mazeGenerator()
         
+        grid.mazeGenerator()
         switch maze{
-        case .dFSMaze:
+        case .unweightMaze:
             grid.backtracking()
         case .weightMaze:
             grid.weightedMaze()
@@ -48,6 +48,8 @@ class ViewModel: ObservableObject{
             grid.bfsSearch()
         case .dij:
             grid.dijkstraSearch()
+        case .dfs:
+            grid.dfsSearch()
         case .none:
             break
         }
@@ -56,6 +58,8 @@ class ViewModel: ObservableObject{
     func findShortestWay(){
         switch algorithm {
         case .bfs:
+            grid.shortestPathBfs()
+        case .dfs:
             grid.shortestPathBfs()
         case .dij:
             grid.shortestPathWeight()

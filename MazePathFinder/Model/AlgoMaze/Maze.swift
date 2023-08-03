@@ -10,14 +10,14 @@ import Foundation
 enum Maze: Identifiable {
     
     var id: Maze { self }
-    case dFSMaze, weightMaze
+    case unweightMaze, weightMaze
     
     var name: String {
             switch self {
-            case .dFSMaze:
-                return "DfsMaze"
+            case .unweightMaze:
+                return "Unweight"
             case .weightMaze:
-                return "WeightMaze"
+                return "Weight"
             }
         }
 }

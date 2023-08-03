@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66A479042A7BF585003F90A6 /* WeightedMaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479032A7BF585003F90A6 /* WeightedMaze.swift */; };
+		66A479062A7C20FD003F90A6 /* Dfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479052A7C20FD003F90A6 /* Dfs.swift */; };
 		66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* MazePathFinderApp.swift */; };
 		66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* MazePathFinder.swift */; };
 		66D343BE2A72E7C300743311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343BD2A72E7C300743311 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		66A479032A7BF585003F90A6 /* WeightedMaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedMaze.swift; sourceTree = "<group>"; };
+		66A479052A7C20FD003F90A6 /* Dfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dfs.swift; sourceTree = "<group>"; };
 		66D343B62A72E7C100743311 /* MazePathFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazePathFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D343B92A72E7C100743311 /* MazePathFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinderApp.swift; sourceTree = "<group>"; };
 		66D343BB2A72E7C100743311 /* MazePathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinder.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				66D343F42A72F7FF00743311 /* Algorithm.swift */,
 				66E9CA012A7B441800518F52 /* Bfs.swift */,
+				66A479052A7C20FD003F90A6 /* Dfs.swift */,
 				66E5CFBB2A79DFA900C815BC /* MinHeap.swift */,
 				66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */,
 			);
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A479062A7C20FD003F90A6 /* Dfs.swift in Sources */,
 				66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */,
 				66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */,
 				66E9CA042A7B448900518F52 /* MazeGenerator.swift in Sources */,

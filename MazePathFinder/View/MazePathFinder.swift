@@ -32,7 +32,7 @@ struct MazePathFinder: View {
                                 .foregroundColor(.white)
                                 .bold()
                         } else{
-                            Text("AlgoMaze")
+                            Text("Maze")
                                 .foregroundColor(.white)
                                 .bold()
                         }

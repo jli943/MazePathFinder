@@ -25,8 +25,8 @@ struct Grid {
                 cells[x][y] = Node(coord: Coordinate(row: x, col: y))
             }
         }
-        startCoord = Coordinate(row: (rowNumber-1)/2, col: (colNumber-1)/2)
-        targetCoord = Coordinate(row: rowNumber-1, col: colNumber-1)
+        startCoord = Coordinate(row: (rowNumber-1)/2+2, col: (colNumber-1)/2)
+        targetCoord = Coordinate(row: rowNumber-3, col: (colNumber-1)/2)
     }
     
     func isValidCoordinate(coord:Coordinate) -> Bool {
@@ -39,10 +39,10 @@ struct Grid {
         let row = coord.row
         let col = coord.col
         let candidateCoords = [
-            Coordinate(row: row - 1, col: col),
+            Coordinate(row: row, col: col + 1),
             Coordinate(row: row + 1, col: col),
             Coordinate(row: row, col: col - 1),
-            Coordinate(row: row, col: col + 1)
+            Coordinate(row: row - 1, col: col)
         ]
         
         for coord in candidateCoords {
@@ -50,7 +50,7 @@ struct Grid {
                 neighbors.append(coord)
             }
         }
-        return neighbors.shuffled()
+        return neighbors
     }
     
     func neighborCoordsInMaze(coord: Coordinate) -> [Coordinate]{
