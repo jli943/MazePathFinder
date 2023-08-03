@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PathfindingVisualizer: View {
+struct MazePathFinder: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -137,6 +137,6 @@ struct CustomButtonStyle: ButtonStyle {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let vM = ViewModel()
-        PathfindingVisualizer(viewModel: vM)
+        MazePathFinder(viewModel: vM)
     }
 }

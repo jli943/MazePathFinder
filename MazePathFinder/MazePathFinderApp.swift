@@ -8,11 +8,11 @@
 import SwiftUI
 
 @main
-struct Pathfinding_VisualizerApp: App {
+struct MazePathFinderApp: App {
     var vM = ViewModel()
     var body: some Scene {
         WindowGroup {
-            PathfindingVisualizer(viewModel: vM)
+            MazePathFinder(viewModel: vM)
         }
     }
 }

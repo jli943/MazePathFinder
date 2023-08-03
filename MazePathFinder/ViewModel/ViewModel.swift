@@ -38,7 +38,7 @@ class ViewModel: ObservableObject{
         case .bfs:
             grid.bfsSearch()
         case .dij:
-            break
+            grid.dijkstraSearch()
         case .none:
             break
         }
@@ -49,7 +49,7 @@ class ViewModel: ObservableObject{
         case .bfs:
             grid.shortestPathBfs()
         case .dij:
-            break
+            grid.shortestPathBfs()
         case .none:
             break
         }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66D343BA2A72E7C100743311 /* Pathfinding_VisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* Pathfinding_VisualizerApp.swift */; };
-		66D343BC2A72E7C100743311 /* PathfindingVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* PathfindingVisualizer.swift */; };
+		66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* MazePathFinderApp.swift */; };
+		66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* MazePathFinder.swift */; };
 		66D343BE2A72E7C300743311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343BD2A72E7C300743311 /* Assets.xcassets */; };
 		66D343C12A72E7C300743311 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343C02A72E7C300743311 /* Preview Assets.xcassets */; };
 		66D343CB2A72EC3D00743311 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343CA2A72EC3D00743311 /* Node.swift */; };
@@ -19,14 +19,17 @@
 		66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */; };
 		66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFBB2A79DFA900C815BC /* MinHeap.swift */; };
 		66E9CA002A7B2DC000518F52 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */; };
+		66E9CA022A7B441800518F52 /* Bfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9CA012A7B441800518F52 /* Bfs.swift */; };
+		66E9CA042A7B448900518F52 /* MazeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9CA032A7B448900518F52 /* MazeGenerator.swift */; };
+		66E9CA062A7B44C600518F52 /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9CA052A7B44C600518F52 /* BackTracking.swift */; };
 		66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AC2A7746E10055F343 /* Maze.swift */; };
 		66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		66D343B62A72E7C100743311 /* Pathfinding Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pathfinding Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66D343B92A72E7C100743311 /* Pathfinding_VisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pathfinding_VisualizerApp.swift; sourceTree = "<group>"; };
-		66D343BB2A72E7C100743311 /* PathfindingVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfindingVisualizer.swift; sourceTree = "<group>"; };
+		66D343B62A72E7C100743311 /* MazePathFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazePathFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D343B92A72E7C100743311 /* MazePathFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinderApp.swift; sourceTree = "<group>"; };
+		66D343BB2A72E7C100743311 /* MazePathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinder.swift; sourceTree = "<group>"; };
 		66D343BD2A72E7C300743311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D343C02A72E7C300743311 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66D343CA2A72EC3D00743311 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -37,6 +40,9 @@
 		66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
 		66E5CFBB2A79DFA900C815BC /* MinHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
 		66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		66E9CA012A7B441800518F52 /* Bfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bfs.swift; sourceTree = "<group>"; };
+		66E9CA032A7B448900518F52 /* MazeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeGenerator.swift; sourceTree = "<group>"; };
+		66E9CA052A7B44C600518F52 /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
 		66FEE7AC2A7746E10055F343 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
 		66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +61,7 @@
 		66D343AD2A72E7C100743311 = {
 			isa = PBXGroup;
 			children = (
-				66D343B82A72E7C100743311 /* Pathfinding Visualizer */,
+				66D343B82A72E7C100743311 /* MazePathFinder */,
 				66D343B72A72E7C100743311 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,22 +69,22 @@
 		66D343B72A72E7C100743311 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66D343B62A72E7C100743311 /* Pathfinding Visualizer.app */,
+				66D343B62A72E7C100743311 /* MazePathFinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66D343B82A72E7C100743311 /* Pathfinding Visualizer */ = {
+		66D343B82A72E7C100743311 /* MazePathFinder */ = {
 			isa = PBXGroup;
 			children = (
-				66D343B92A72E7C100743311 /* Pathfinding_VisualizerApp.swift */,
-				66D343C72A72E7DA00743311 /* Model */,
-				66D343C82A72E7F000743311 /* ViewModel */,
+				66D343B92A72E7C100743311 /* MazePathFinderApp.swift */,
 				66D343C92A72E80100743311 /* View */,
+				66D343C82A72E7F000743311 /* ViewModel */,
+				66D343C72A72E7DA00743311 /* Model */,
 				66D343BD2A72E7C300743311 /* Assets.xcassets */,
 				66D343BF2A72E7C300743311 /* Preview Content */,
 			);
-			path = "Pathfinding Visualizer";
+			path = MazePathFinder;
 			sourceTree = "<group>";
 		};
 		66D343BF2A72E7C300743311 /* Preview Content */ = {
@@ -95,8 +101,8 @@
 				66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */,
 				66D343CA2A72EC3D00743311 /* Node.swift */,
 				66D343CC2A72EC5400743311 /* Grid.swift */,
-				66D343F42A72F7FF00743311 /* Algorithm.swift */,
-				66FEE7AC2A7746E10055F343 /* Maze.swift */,
+				66E9CA082A7B496C00518F52 /* AlgoMaze */,
+				66E9CA072A7B494D00518F52 /* AlgoSearch */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				66D343CE2A72ECAD00743311 /* ViewModel.swift */,
-				66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */,
-				66E5CFBB2A79DFA900C815BC /* MinHeap.swift */,
 				66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -115,18 +119,39 @@
 		66D343C92A72E80100743311 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				66D343BB2A72E7C100743311 /* PathfindingVisualizer.swift */,
+				66D343BB2A72E7C100743311 /* MazePathFinder.swift */,
 				66D343F22A72F55500743311 /* GridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		66E9CA072A7B494D00518F52 /* AlgoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				66D343F42A72F7FF00743311 /* Algorithm.swift */,
+				66E9CA012A7B441800518F52 /* Bfs.swift */,
+				66E5CFBB2A79DFA900C815BC /* MinHeap.swift */,
+				66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */,
+			);
+			path = AlgoSearch;
+			sourceTree = "<group>";
+		};
+		66E9CA082A7B496C00518F52 /* AlgoMaze */ = {
+			isa = PBXGroup;
+			children = (
+				66FEE7AC2A7746E10055F343 /* Maze.swift */,
+				66E9CA032A7B448900518F52 /* MazeGenerator.swift */,
+				66E9CA052A7B44C600518F52 /* BackTracking.swift */,
+			);
+			path = AlgoMaze;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66D343B52A72E7C100743311 /* Pathfinding Visualizer */ = {
+		66D343B52A72E7C100743311 /* MazePathFinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D343C42A72E7C300743311 /* Build configuration list for PBXNativeTarget "Pathfinding Visualizer" */;
+			buildConfigurationList = 66D343C42A72E7C300743311 /* Build configuration list for PBXNativeTarget "MazePathFinder" */;
 			buildPhases = (
 				66D343B22A72E7C100743311 /* Sources */,
 				66D343B32A72E7C100743311 /* Frameworks */,
@@ -136,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = "Pathfinding Visualizer";
+			name = MazePathFinder;
 			productName = "Pathfinding Visualizer";
-			productReference = 66D343B62A72E7C100743311 /* Pathfinding Visualizer.app */;
+			productReference = 66D343B62A72E7C100743311 /* MazePathFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 66D343B12A72E7C100743311 /* Build configuration list for PBXProject "Pathfinding Visualizer" */;
+			buildConfigurationList = 66D343B12A72E7C100743311 /* Build configuration list for PBXProject "MazePathFinder" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +194,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66D343B52A72E7C100743311 /* Pathfinding Visualizer */,
+				66D343B52A72E7C100743311 /* MazePathFinder */,
 			);
 		};
 /* End PBXProject section */
@@ -193,13 +218,16 @@
 			files = (
 				66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */,
 				66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */,
+				66E9CA042A7B448900518F52 /* MazeGenerator.swift in Sources */,
+				66E9CA062A7B44C600518F52 /* BackTracking.swift in Sources */,
 				66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */,
 				66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */,
 				66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */,
+				66E9CA022A7B441800518F52 /* Bfs.swift in Sources */,
 				66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
-				66D343BC2A72E7C100743311 /* PathfindingVisualizer.swift in Sources */,
-				66D343BA2A72E7C100743311 /* Pathfinding_VisualizerApp.swift in Sources */,
+				66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */,
+				66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */,
 				66D343F32A72F55500743311 /* GridView.swift in Sources */,
 				66D343CD2A72EC5400743311 /* Grid.swift in Sources */,
 				66E9CA002A7B2DC000518F52 /* Coordinate.swift in Sources */,
@@ -330,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pathfinding Visualizer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MazePathFinder/Preview Content\"";
 				DEVELOPMENT_TEAM = MP3V73LYUM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -359,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pathfinding Visualizer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MazePathFinder/Preview Content\"";
 				DEVELOPMENT_TEAM = MP3V73LYUM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -384,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		66D343B12A72E7C100743311 /* Build configuration list for PBXProject "Pathfinding Visualizer" */ = {
+		66D343B12A72E7C100743311 /* Build configuration list for PBXProject "MazePathFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D343C22A72E7C300743311 /* Debug */,
@@ -393,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D343C42A72E7C300743311 /* Build configuration list for PBXNativeTarget "Pathfinding Visualizer" */ = {
+		66D343C42A72E7C300743311 /* Build configuration list for PBXNativeTarget "MazePathFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D343C52A72E7C300743311 /* Debug */,
