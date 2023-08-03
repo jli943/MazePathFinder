@@ -19,3 +19,4 @@ enum Maze: Identifiable {
             }
         }
 }
+

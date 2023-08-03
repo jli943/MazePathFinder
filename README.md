@@ -8,11 +8,6 @@ This SwiftUI-based iOS app implements a grid-based pathfinding application that 
 - Find Shortest Path: Users can select different algorithms like Dijkstra to find the shortest path between any two points in the gird.
 - Visual Representation: The app provides an interactive grid-based visual representation of the maze and the shortest path, making it easy for users to understand the process.
 
-## Requirements
-
-- Xcode 12.0 or later
-- Swift 5.0 or later
-- iOS 16.4 or later
 
 ## MVVM Architecture
 
@@ -28,27 +23,31 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 
 ![MazePathFinder Demo](https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif)
 
+## Shortest Path Finding (AlgoSearch)
+
+### Breadth-First Search (BFS) Algorithm - Unweighted/Guarantee shortest path
+
+The Breadth-First Search algorithm is used for finding the shortest path through the generated maze. BFS is a graph traversal algorithm that explores all the vertices at the current depth level before moving to the next level. In the context of the maze grid, BFS starts from the selected starting point and explores neighboring cells level by level until the destination point is reached. This guarantees that the first path found is the shortest one, making it ideal for pathfinding in unweighted graphs like the maze grid.
+
+### Dijkstra's Algorithm - Weighted/Guarantee shortest path
+
+### A Search - Weighted/Guarantee shortest path
+
+### Greedy Best-First Search - Weighted/Not guarantee shortest path
+
 
 ## Maze Generation (AlgoMaze)
 
 ### Depth-First Search (DFS) Algorithm
 
-The Depth-First Search algorithm is used for maze generation. It works by starting at a random cell in the grid and randomly picking a neighbor that has not been visited yet. The algorithm moves to that neighbor, marks it as visited, and continues the process recursively from the newly visited cell. If a cell has no unvisited neighbors, the algorithm backtracks to the previous cell and continues the process. This creates a randomized path through the grid, effectively generating a maze with unique paths.
+1.Given a current cell as a parameter
+2.Mark the current cell as visited
+3.While the current cell has any unvisited neighbour cells
+    1.Choose one of the unvisited neighbours
+    2.Remove the wall between the current cell and the chosen cell
+    3.Invoke the routine recursively for the chosen cell
+Reference: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
-## Shortest Path Finding (AlgoSearch)
-
-### Breadth-First Search (BFS) Algorithm
-
-The Breadth-First Search algorithm is used for finding the shortest path through the generated maze. BFS is a graph traversal algorithm that explores all the vertices at the current depth level before moving to the next level. In the context of the maze grid, BFS starts from the selected starting point and explores neighboring cells level by level until the destination point is reached. This guarantees that the first path found is the shortest one, making it ideal for pathfinding in unweighted graphs like the maze grid.
-
-## Usage
-
-1. Upon launching the app, a grid representing the maze will be displayed.
-2. Tap the "AlgoMaze" menu to create a random maze using selected algorithm.
-3. Tap the "AlgoSearch" menu to select search algorithm.
-4. Tap the "Start" button to find the target using selected search algorithm.
-5. Tap the "ShortPath" button to find the shortest path to target node.
-6. Tap the "Reset" button to reset the grid.
 
 
 ## Contact

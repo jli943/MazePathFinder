@@ -7,40 +7,28 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
+class ViewModel: ObservableObject{
     private static let rowNumber = 29
-    private static let colNumber = 21
-    @Published var grid: Grid = Grid(row: rowNumber, col:colNumber)
-    @Published var startPoint = Coordinate(row: 0, col: 0)
-    @Published var targetPoint = Coordinate(row: rowNumber-1, col: colNumber-1)
+    private static let colNumber = 23
+    @Published var grid = Grid(row: rowNumber, col: colNumber)
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
+    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij]
+    let mazeMenu:[Maze] = [.dFSMaze]
     
-    let mazes:[Maze] = [.dFSMaze]
-    let algorithms: [Algorithm] = [.bfs, .dfs]
-    var barrierSet: Set<Coordinate> = []
-    
-    
-    func resetGrid() {
-        for x in 0..<grid.row {
-            for y in 0..<grid.col {
-                grid.cells[x][y].distance = nil
-//                grid.cells[x][y].visited = false
-                grid.cells[x][y].onPath = false
-                grid.cells[x][y].isBarrier = false
-            }
-        }
-        barrierSet = []
+    func ResetGraph(){
+        grid.resetGrid()
         algorithm = nil
         maze = nil
     }
     
     func chooseMaze(){
+        grid.mazeGenerator()
+        
         switch maze{
         case .dFSMaze:
-            self.MazeGenerator(rowNumber: ViewModel.rowNumber, colNumber: ViewModel.colNumber)
-            self.Backtracking(curCoord: Coordinate(row: 0, col: 0))
+            grid.backtracking()
         case .none: break
         }
     }
@@ -48,23 +36,23 @@ class ViewModel: ObservableObject {
     func startSearch(){
         switch algorithm {
         case .bfs:
-                self.bfs(startCoord: self.startPoint, targetCoord: self.targetPoint)
-        case .dfs: break
-            
+            grid.bfsSearch()
+        case .dij:
+            break
         case .none:
             break
         }
     }
+    
     func findShortestWay(){
         switch algorithm {
         case .bfs:
-                self.shortestPathBfs(startCoord: self.startPoint, targetCoord: self.targetPoint)
-        case .dfs:
+            grid.shortestPathBfs()
+        case .dij:
             break
         case .none:
             break
         }
     }
-
+    
 }
-

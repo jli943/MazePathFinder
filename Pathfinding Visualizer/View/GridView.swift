@@ -26,20 +26,20 @@ struct GridView: View {
     
     private func createColumns() -> [GridItem] {
         var columns = [GridItem]()
-        for _ in 0..<viewModel.grid.col {
+        for _ in 0..<viewModel.grid.colNumber {
             columns.append(GridItem(.flexible(), spacing: 0))
         }
         return columns
     }
     
     private func getSymbol(for cell: Node) -> some View {
-        if cell.coord == viewModel.startPoint{
+        if cell.coord == viewModel.grid.startCoord{
+            return AnyView(Image(systemName: "car.fill")
+                .font(.system(size: 30))
+                .foregroundColor(.black))
+        } else if cell.coord == viewModel.grid.targetCoord {
             return AnyView(Image(systemName: "star.fill")
-                .font(.system(size: 20))
-                .foregroundColor(.red))
-        } else if cell.coord == viewModel.targetPoint {
-            return AnyView(Image(systemName: "flag.fill")
-                .font(.system(size: 20))
+                .font(.system(size: 30))
                 .foregroundColor(.red))
         } else {
             return AnyView(EmptyView())
@@ -63,7 +63,7 @@ struct CellView: View {
             .onChange(of: cell.distance) { distance in
                 if let cellDistance = distance {
                     print(cellDistance)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 50)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 30)) {
                         withAnimation(.easeInOut(duration: 0.5)) {
                             cellColor =  .cyan
                         }
@@ -74,7 +74,7 @@ struct CellView: View {
             }
             .onChange(of: cell.onPath) { path in
                 if path {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cell.distance! * 50)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cell.distance! * 30)) {
                         withAnimation(.linear(duration: 0.5)) {
                             cellColor =  .yellow
                         }

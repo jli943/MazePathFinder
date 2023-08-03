@@ -15,7 +15,7 @@ struct PathfindingVisualizer: View {
             
             HStack(spacing: 50) {
                 Menu {
-                    ForEach(viewModel.mazes) { maze in
+                    ForEach(viewModel.mazeMenu) { maze in
                         Button(action: {
                             viewModel.maze = maze
                             viewModel.chooseMaze()
@@ -48,7 +48,7 @@ struct PathfindingVisualizer: View {
                 }
                 
                 Menu {
-                    ForEach(viewModel.algorithms) { algorithm in
+                    ForEach(viewModel.algoritrhmsMenu) { algorithm in
                         Button(action: {
                             viewModel.algorithm = algorithm
                         }) {
@@ -98,7 +98,7 @@ struct PathfindingVisualizer: View {
                 
                 // Reset Button
                 Button("Reset") {
-                    viewModel.resetGrid()
+                    viewModel.ResetGraph()
                 }
                 .buttonStyle(CustomButtonStyle(color: .red))
             }

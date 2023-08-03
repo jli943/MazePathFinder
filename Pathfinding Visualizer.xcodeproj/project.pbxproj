@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6670EF612A74501E0061E39F /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670EF602A74501E0061E39F /* BFS.swift */; };
 		66D343BA2A72E7C100743311 /* Pathfinding_VisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* Pathfinding_VisualizerApp.swift */; };
 		66D343BC2A72E7C100743311 /* PathfindingVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* PathfindingVisualizer.swift */; };
 		66D343BE2A72E7C300743311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343BD2A72E7C300743311 /* Assets.xcassets */; };
@@ -17,14 +16,14 @@
 		66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343CE2A72ECAD00743311 /* ViewModel.swift */; };
 		66D343F32A72F55500743311 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343F22A72F55500743311 /* GridView.swift */; };
 		66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343F42A72F7FF00743311 /* Algorithm.swift */; };
-		66E5CFB62A78985B00C815BC /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFB52A78985B00C815BC /* BackTracking.swift */; };
-		66E5CFB82A794FA500C815BC /* MazeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFB72A794FA400C815BC /* MazeGenerator.swift */; };
+		66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */; };
+		66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5CFBB2A79DFA900C815BC /* MinHeap.swift */; };
+		66E9CA002A7B2DC000518F52 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */; };
 		66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AC2A7746E10055F343 /* Maze.swift */; };
 		66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6670EF602A74501E0061E39F /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
 		66D343B62A72E7C100743311 /* Pathfinding Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pathfinding Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D343B92A72E7C100743311 /* Pathfinding_VisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pathfinding_VisualizerApp.swift; sourceTree = "<group>"; };
 		66D343BB2A72E7C100743311 /* PathfindingVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfindingVisualizer.swift; sourceTree = "<group>"; };
@@ -35,8 +34,9 @@
 		66D343CE2A72ECAD00743311 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		66D343F22A72F55500743311 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		66D343F42A72F7FF00743311 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
-		66E5CFB52A78985B00C815BC /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
-		66E5CFB72A794FA400C815BC /* MazeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeGenerator.swift; sourceTree = "<group>"; };
+		66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		66E5CFBB2A79DFA900C815BC /* MinHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
+		66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		66FEE7AC2A7746E10055F343 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
 		66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +92,7 @@
 		66D343C72A72E7DA00743311 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66E9C9FF2A7B2DC000518F52 /* Coordinate.swift */,
 				66D343CA2A72EC3D00743311 /* Node.swift */,
 				66D343CC2A72EC5400743311 /* Grid.swift */,
 				66D343F42A72F7FF00743311 /* Algorithm.swift */,
@@ -104,9 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				66D343CE2A72ECAD00743311 /* ViewModel.swift */,
-				6670EF602A74501E0061E39F /* BFS.swift */,
-				66E5CFB72A794FA400C815BC /* MazeGenerator.swift */,
-				66E5CFB52A78985B00C815BC /* BackTracking.swift */,
+				66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */,
+				66E5CFBB2A79DFA900C815BC /* MinHeap.swift */,
 				66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -191,18 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */,
 				66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */,
 				66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */,
-				66E5CFB62A78985B00C815BC /* BackTracking.swift in Sources */,
 				66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */,
 				66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */,
+				66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
-				66E5CFB82A794FA500C815BC /* MazeGenerator.swift in Sources */,
 				66D343BC2A72E7C100743311 /* PathfindingVisualizer.swift in Sources */,
 				66D343BA2A72E7C100743311 /* Pathfinding_VisualizerApp.swift in Sources */,
 				66D343F32A72F55500743311 /* GridView.swift in Sources */,
 				66D343CD2A72EC5400743311 /* Grid.swift in Sources */,
-				6670EF612A74501E0061E39F /* BFS.swift in Sources */,
+				66E9CA002A7B2DC000518F52 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
