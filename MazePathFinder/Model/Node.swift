@@ -11,6 +11,7 @@ struct Node: Identifiable, Comparable, Hashable {
     var id = UUID()
     var coord: Coordinate
     var distance: Int?
+    var weight = 1
     var onPath = false
     var isBarrier = false
     

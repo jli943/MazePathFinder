@@ -40,7 +40,7 @@ struct GridView: View {
         } else if cell.coord == viewModel.grid.targetCoord {
             return AnyView(Image(systemName: "star.fill")
                 .font(.system(size: 30))
-                .foregroundColor(.red))
+                .foregroundColor(.green))
         } else {
             return AnyView(EmptyView())
         }
@@ -51,15 +51,29 @@ struct GridView: View {
 struct CellView: View {
     var cell: Node
     @State private var cellColor: Color = .white
+    @State private var cellWeight = 1
     
     var body: some View {
         Rectangle()
             .foregroundColor(cellColor)
             .frame(minWidth: 40, minHeight: 40)
             .border(Color.gray, width: 1)
+            .overlay{
+                ZStack{
+                    if cellWeight > 1{
+                        Text("\(cellWeight)")
+                            .foregroundColor(.red)
+                            .font(.system(size: 30, weight: .bold))
+                        
+                    }
+                }
+            }
             .onChange(of: cell.isBarrier){
                 cellColor = $0 ? .black : .white
             }
+            .onChange(of: cell.weight, perform: {
+                cellWeight = $0
+            })
             .onChange(of: cell.distance) { distance in
                 if let cellDistance = distance {
                     print(cellDistance)

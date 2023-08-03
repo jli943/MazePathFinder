@@ -8,9 +8,10 @@
 import SwiftUI
 
 extension Grid{
+    //weight still compare distance
     mutating func dijkstraSearch (){
         let minHeap = MinHeap<Node>()
-        cells[startCoord.row][startCoord.col].distance = 0
+        cells[startCoord.row][startCoord.col].distance = 1
         minHeap.insert(cells[startCoord.row][startCoord.col])
         var visited: Set<Coordinate> = []
         while !minHeap.isEmpty{
@@ -24,7 +25,7 @@ extension Grid{
                 }
                 for neighborCoord in neighborCoords(coord: curNode.coord){
                     if !visited.contains(neighborCoord), !barrierCoords.contains(neighborCoord){
-                        let newDistance = (curNode.distance ?? Int.max) + 1
+                        let newDistance = (curNode.distance ?? Int.max) + cells[neighborCoord.row][neighborCoord.col].weight
                         if newDistance < (cells[neighborCoord.row][neighborCoord.col].distance ?? Int.max) {
                             cells[neighborCoord.row][neighborCoord.col].distance = newDistance
                             minHeap.insert(cells[neighborCoord.row][neighborCoord.col])
@@ -36,6 +37,21 @@ extension Grid{
             
         }
         
+    }
+    
+    mutating func shortestPathWeight() {
+        var currentCoord = targetCoord
+        while currentCoord != startCoord {
+            let currentDistance = cells[currentCoord.row][currentCoord.col].distance
+            cells[currentCoord.row][currentCoord.col].onPath = true
+            
+            for neighborCoord in neighborCoords(coord: currentCoord) {
+                if cells[neighborCoord.row][neighborCoord.col].distance == currentDistance! - cells[currentCoord.row][currentCoord.col].weight {
+                    currentCoord = neighborCoord
+                }
+            }
+        }
+        cells[currentCoord.row][currentCoord.col].onPath = true
     }
     
     

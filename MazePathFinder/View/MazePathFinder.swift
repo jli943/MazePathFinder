@@ -51,6 +51,7 @@ struct MazePathFinder: View {
                     ForEach(viewModel.algoritrhmsMenu) { algorithm in
                         Button(action: {
                             viewModel.algorithm = algorithm
+                            viewModel.chooseSearchAlgo()
                         }) {
                             Text(algorithm.name)
                             

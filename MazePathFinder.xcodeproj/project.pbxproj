@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66A479042A7BF585003F90A6 /* WeightedMaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479032A7BF585003F90A6 /* WeightedMaze.swift */; };
 		66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* MazePathFinderApp.swift */; };
 		66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* MazePathFinder.swift */; };
 		66D343BE2A72E7C300743311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343BD2A72E7C300743311 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66A479032A7BF585003F90A6 /* WeightedMaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedMaze.swift; sourceTree = "<group>"; };
 		66D343B62A72E7C100743311 /* MazePathFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazePathFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D343B92A72E7C100743311 /* MazePathFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinderApp.swift; sourceTree = "<group>"; };
 		66D343BB2A72E7C100743311 /* MazePathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinder.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				66FEE7AC2A7746E10055F343 /* Maze.swift */,
 				66E9CA032A7B448900518F52 /* MazeGenerator.swift */,
 				66E9CA052A7B44C600518F52 /* BackTracking.swift */,
+				66A479032A7BF585003F90A6 /* WeightedMaze.swift */,
 			);
 			path = AlgoMaze;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
 				66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */,
+				66A479042A7BF585003F90A6 /* WeightedMaze.swift in Sources */,
 				66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */,
 				66D343F32A72F55500743311 /* GridView.swift in Sources */,
 				66D343CD2A72EC5400743311 /* Grid.swift in Sources */,

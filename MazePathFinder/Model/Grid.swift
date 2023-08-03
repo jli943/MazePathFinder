@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Grid: Identifiable {
-    var id = UUID()
+struct Grid {
     var rowNumber: Int
     var colNumber: Int
     var startCoord: Coordinate
     var targetCoord: Coordinate
     var cells: [[Node]]
     var barrierCoords:Set<Coordinate> = []
+    var weightCoords:Set<Coordinate> = []
     
     init(row: Int, col: Int) {
         rowNumber = row
@@ -25,7 +25,7 @@ struct Grid: Identifiable {
                 cells[x][y] = Node(coord: Coordinate(row: x, col: y))
             }
         }
-        startCoord = Coordinate(row: 0, col: 0)
+        startCoord = Coordinate(row: (rowNumber-1)/2, col: (colNumber-1)/2)
         targetCoord = Coordinate(row: rowNumber-1, col: colNumber-1)
     }
     
@@ -78,8 +78,31 @@ struct Grid: Identifiable {
                 cells[x][y].distance = nil
                 cells[x][y].onPath = false
                 cells[x][y].isBarrier = false
+                cells[x][y].weight = 1
             }
         }
         barrierCoords = []
+        weightCoords = []
+    }
+    
+    mutating func resetSearch(){
+        for x in 0..<rowNumber {
+            for y in 0..<colNumber {
+                cells[x][y].distance = nil
+                cells[x][y].onPath = false
+            }
+        }
+    }
+    
+    mutating func resetMaze(){
+        for x in 0..<rowNumber {
+            for y in 0..<colNumber {
+                cells[x][y].isBarrier = false
+                cells[x][y].weight = 1
+            }
+        }
+        
+        barrierCoords = []
+        weightCoords = []
     }
 }

@@ -8,14 +8,16 @@
 import SwiftUI
 
 class ViewModel: ObservableObject{
+    //row-29
+    //col-23
     private static let rowNumber = 29
-    private static let colNumber = 23
+    private static let colNumber = 25
     @Published var grid = Grid(row: rowNumber, col: colNumber)
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
     let algoritrhmsMenu:[Algorithm] = [.bfs, .dij]
-    let mazeMenu:[Maze] = [.dFSMaze]
+    let mazeMenu:[Maze] = [.dFSMaze, .weightMaze]
     
     func ResetGraph(){
         grid.resetGrid()
@@ -24,13 +26,20 @@ class ViewModel: ObservableObject{
     }
     
     func chooseMaze(){
+        grid.resetMaze()
         grid.mazeGenerator()
         
         switch maze{
         case .dFSMaze:
             grid.backtracking()
+        case .weightMaze:
+            grid.weightedMaze()
         case .none: break
         }
+    }
+    
+    func chooseSearchAlgo(){
+        grid.resetSearch()
     }
     
     func startSearch(){
@@ -49,7 +58,7 @@ class ViewModel: ObservableObject{
         case .bfs:
             grid.shortestPathBfs()
         case .dij:
-            grid.shortestPathBfs()
+            grid.shortestPathWeight()
         case .none:
             break
         }
