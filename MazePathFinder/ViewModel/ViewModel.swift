@@ -9,14 +9,14 @@ import SwiftUI
 
 class ViewModel: ObservableObject{
     //row-29
-    //col-23
+    //col-25
     private static let rowNumber = 29
     private static let colNumber = 25
     @Published var grid = Grid(row: rowNumber, col: colNumber)
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
-    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs]
+    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs, .astar]
     let mazeMenu:[Maze] = [.unweightMaze, .weightMaze]
     
     func ResetGraph(){
@@ -50,6 +50,10 @@ class ViewModel: ObservableObject{
             grid.dijkstraSearch()
         case .dfs:
             grid.dfsSearch()
+        case .astar:
+            grid.aStar()
+            // Assuming grid.cells is [[Node]]
+
         case .none:
             break
         }
@@ -58,10 +62,12 @@ class ViewModel: ObservableObject{
     func findShortestWay(){
         switch algorithm {
         case .bfs:
-            grid.shortestPathBfs()
+            grid.shortestPathUnweight()
         case .dfs:
-            grid.shortestPathBfs()
+            grid.shortestPathUnweight()
         case .dij:
+            grid.shortestPathWeight()
+        case .astar:
             grid.shortestPathWeight()
         case .none:
             break

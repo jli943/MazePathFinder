@@ -31,7 +31,11 @@ The Breadth-First Search algorithm is used for finding the shortest path through
 
 ### Dijkstra's Algorithm - Weighted/Guarantee shortest path
 
+Reference: https://builtin.com/software-engineering-perspectives/dijkstras-algorithm
+
 ### A Search - Weighted/Guarantee shortest path
+
+Reference: https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2
 
 ### Greedy Best-First Search - Weighted/Not guarantee shortest path
 
@@ -40,12 +44,18 @@ The Breadth-First Search algorithm is used for finding the shortest path through
 
 ### Depth-First Search (DFS) Algorithm
 
-1.Given a current cell as a parameter
-2.Mark the current cell as visited
-3.While the current cell has any unvisited neighbour cells
-    1.Choose one of the unvisited neighbours
-    2.Remove the wall between the current cell and the chosen cell
-    3.Invoke the routine recursively for the chosen cell
+1. Given a current cell as a parameter
+
+2. Mark the current cell as visited
+
+3. While the current cell has any unvisited neighbour cells
+
+    1. Choose one of the unvisited neighbours
+    
+    2. Remove the wall between the current cell and the chosen cell
+    
+    3. Invoke the routine recursively for the chosen cell
+    
 Reference: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
 

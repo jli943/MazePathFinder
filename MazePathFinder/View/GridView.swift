@@ -76,7 +76,7 @@ struct CellView: View {
             })
             .onChange(of: cell.distance) { distance in
                 if let cellDistance = distance {
-                    print(cellDistance)
+//                    print(cellDistance)
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(cellDistance * 30)) {
                         withAnimation(.easeInOut(duration: 0.5)) {
                             cellColor =  .cyan

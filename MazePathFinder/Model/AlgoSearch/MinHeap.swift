@@ -23,6 +23,10 @@ class MinHeap<T: Comparable> {
         }
     }
     
+    func contains(_ element:T)-> Bool{
+        heap.contains(element)
+    }
+    
     // Remove and return the top
     // element of the heap
     func remove() -> T? {

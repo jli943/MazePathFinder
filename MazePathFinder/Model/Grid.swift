@@ -90,6 +90,8 @@ struct Grid {
             for y in 0..<colNumber {
                 cells[x][y].distance = nil
                 cells[x][y].onPath = false
+                cells[x][y].aStarF = nil
+                cells[x][y].heuristic = nil
             }
         }
     }
