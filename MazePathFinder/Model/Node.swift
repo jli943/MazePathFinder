@@ -26,6 +26,11 @@ struct Node: Identifiable, Comparable, Hashable {
         if let lhsAStarF = lhs.aStarF, let rhsAStarF = rhs.aStarF {
             return lhsAStarF < rhsAStarF
         }
+        
+        if let lhsHeuristic = lhs.heuristic, let rhsHeuristic = rhs.heuristic {
+            return lhsHeuristic < rhsHeuristic
+        }
+        
         // Assume that nodes without a distance are considered greater (placed farther) than nodes with a distance
         if lhs.distance == nil {
             return false

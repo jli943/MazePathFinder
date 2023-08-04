@@ -10,7 +10,7 @@ import Foundation
 enum Algorithm: Identifiable {
     
     var id: Algorithm { self }
-    case bfs,dij,dfs,astar
+    case bfs,dij,dfs,astar, greedy
     
     var name: String {
             switch self {
@@ -22,6 +22,8 @@ enum Algorithm: Identifiable {
                 return "Dijkstra"
             case .astar:
                 return "A-Star"
+            case .greedy:
+                return "Greedy"
             }
         
         }

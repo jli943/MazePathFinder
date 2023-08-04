@@ -16,7 +16,7 @@ class ViewModel: ObservableObject{
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
-    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs, .astar]
+    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs, .astar,.greedy]
     let mazeMenu:[Maze] = [.unweightMaze, .weightMaze]
     
     func ResetGraph(){
@@ -52,7 +52,8 @@ class ViewModel: ObservableObject{
             grid.dfsSearch()
         case .astar:
             grid.aStar()
-            // Assuming grid.cells is [[Node]]
+        case .greedy:
+            grid.greedyBestFirstSearch()
 
         case .none:
             break
@@ -68,6 +69,8 @@ class ViewModel: ObservableObject{
         case .dij:
             grid.shortestPathWeight()
         case .astar:
+            grid.shortestPathWeight()
+        case.greedy:
             grid.shortestPathWeight()
         case .none:
             break

@@ -14,6 +14,11 @@ extension Grid{
         let colDistance = coord.col - targetCoord.col
         return Int(sqrt(Double(rowDistance * rowDistance + colDistance * colDistance)).rounded())
     }
+//    private func heuristic(coord: Coordinate) -> Int {
+//        let rowDistance = coord.row - targetCoord.row + cells[coord.row][coord.col].weight - 1
+//        let colDistance = coord.col - targetCoord.col + cells[coord.row][coord.col].weight - 1
+//        return abs(rowDistance)+abs(colDistance)
+//    }
     
     //A* f(aStarF) = g(distance) + h(heuristic)
     mutating func aStar(){

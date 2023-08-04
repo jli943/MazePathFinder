@@ -25,7 +25,7 @@ struct Grid {
                 cells[x][y] = Node(coord: Coordinate(row: x, col: y))
             }
         }
-        startCoord = Coordinate(row: (rowNumber-1)/2+2, col: (colNumber-1)/2)
+        startCoord = Coordinate(row: 2, col: (colNumber-1)/2)
         targetCoord = Coordinate(row: rowNumber-3, col: (colNumber-1)/2)
     }
     

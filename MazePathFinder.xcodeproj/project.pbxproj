@@ -10,8 +10,9 @@
 		66A479042A7BF585003F90A6 /* WeightedMaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479032A7BF585003F90A6 /* WeightedMaze.swift */; };
 		66A479062A7C20FD003F90A6 /* Dfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479052A7C20FD003F90A6 /* Dfs.swift */; };
 		66A479082A7C2BDF003F90A6 /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479072A7C2BDF003F90A6 /* AStar.swift */; };
-		66A4790A2A7C55DA003F90A6 /* shortestPathUnweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479092A7C55DA003F90A6 /* shortestPathUnweight.swift */; };
-		66A4790C2A7C5626003F90A6 /* shortestPathWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4790B2A7C5626003F90A6 /* shortestPathWeight.swift */; };
+		66A4790A2A7C55DA003F90A6 /* ShortestPathUnweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A479092A7C55DA003F90A6 /* ShortestPathUnweight.swift */; };
+		66A4790C2A7C5626003F90A6 /* ShortestPathWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4790B2A7C5626003F90A6 /* ShortestPathWeight.swift */; };
+		66A4790E2A7C705E003F90A6 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4790D2A7C705E003F90A6 /* Greedy.swift */; };
 		66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343B92A72E7C100743311 /* MazePathFinderApp.swift */; };
 		66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D343BB2A72E7C100743311 /* MazePathFinder.swift */; };
 		66D343BE2A72E7C300743311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D343BD2A72E7C300743311 /* Assets.xcassets */; };
@@ -35,8 +36,9 @@
 		66A479032A7BF585003F90A6 /* WeightedMaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedMaze.swift; sourceTree = "<group>"; };
 		66A479052A7C20FD003F90A6 /* Dfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dfs.swift; sourceTree = "<group>"; };
 		66A479072A7C2BDF003F90A6 /* AStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
-		66A479092A7C55DA003F90A6 /* shortestPathUnweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortestPathUnweight.swift; sourceTree = "<group>"; };
-		66A4790B2A7C5626003F90A6 /* shortestPathWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortestPathWeight.swift; sourceTree = "<group>"; };
+		66A479092A7C55DA003F90A6 /* ShortestPathUnweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortestPathUnweight.swift; sourceTree = "<group>"; };
+		66A4790B2A7C5626003F90A6 /* ShortestPathWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortestPathWeight.swift; sourceTree = "<group>"; };
+		66A4790D2A7C705E003F90A6 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		66D343B62A72E7C100743311 /* MazePathFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazePathFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D343B92A72E7C100743311 /* MazePathFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinderApp.swift; sourceTree = "<group>"; };
 		66D343BB2A72E7C100743311 /* MazePathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazePathFinder.swift; sourceTree = "<group>"; };
@@ -144,8 +146,9 @@
 				66E5CFBB2A79DFA900C815BC /* MinHeap.swift */,
 				66E5CFB92A79DE7E00C815BC /* Dijkstra.swift */,
 				66A479072A7C2BDF003F90A6 /* AStar.swift */,
-				66A479092A7C55DA003F90A6 /* shortestPathUnweight.swift */,
-				66A4790B2A7C5626003F90A6 /* shortestPathWeight.swift */,
+				66A4790D2A7C705E003F90A6 /* Greedy.swift */,
+				66A479092A7C55DA003F90A6 /* ShortestPathUnweight.swift */,
+				66A4790B2A7C5626003F90A6 /* ShortestPathWeight.swift */,
 			);
 			path = AlgoSearch;
 			sourceTree = "<group>";
@@ -233,7 +236,7 @@
 			files = (
 				66A479062A7C20FD003F90A6 /* Dfs.swift in Sources */,
 				66E5CFBA2A79DE7E00C815BC /* Dijkstra.swift in Sources */,
-				66A4790A2A7C55DA003F90A6 /* shortestPathUnweight.swift in Sources */,
+				66A4790A2A7C55DA003F90A6 /* ShortestPathUnweight.swift in Sources */,
 				66D343F52A72F7FF00743311 /* Algorithm.swift in Sources */,
 				66E9CA042A7B448900518F52 /* MazeGenerator.swift in Sources */,
 				66E9CA062A7B44C600518F52 /* BackTracking.swift in Sources */,
@@ -243,13 +246,14 @@
 				66E9CA022A7B441800518F52 /* Bfs.swift in Sources */,
 				66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
-				66A4790C2A7C5626003F90A6 /* shortestPathWeight.swift in Sources */,
+				66A4790C2A7C5626003F90A6 /* ShortestPathWeight.swift in Sources */,
 				66D343BC2A72E7C100743311 /* MazePathFinder.swift in Sources */,
 				66A479042A7BF585003F90A6 /* WeightedMaze.swift in Sources */,
 				66D343BA2A72E7C100743311 /* MazePathFinderApp.swift in Sources */,
 				66D343F32A72F55500743311 /* GridView.swift in Sources */,
 				66A479082A7C2BDF003F90A6 /* AStar.swift in Sources */,
 				66D343CD2A72EC5400743311 /* Grid.swift in Sources */,
+				66A4790E2A7C705E003F90A6 /* Greedy.swift in Sources */,
 				66E9CA002A7B2DC000518F52 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
