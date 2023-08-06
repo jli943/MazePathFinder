@@ -26,27 +26,27 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dijkstra.gif" alt="GIF 1" width="130">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dijkstra.gif" alt="GIF 1" width="133">
       <br>
       Dijkstra
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/astar.gif" alt="GIF 2" width="130">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/astar.gif" alt="GIF 2" width="133">
       <br>
       A-Star
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/greedy.gif" alt="GIF 3" width="130">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/greedy.gif" alt="GIF 3" width="133">
       <br>
       Greedy
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/bfs.gif" alt="GIF 4" width="130">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/bfs.gif" alt="GIF 4" width="133">
       <br>
       BFS
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dfs.gif" alt="GIF 5" width="130">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dfs.gif" alt="GIF 5" width="133">
       <br>
       DFS
     </td>
