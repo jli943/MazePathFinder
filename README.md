@@ -1,10 +1,11 @@
 # MazePathFinder
 
-This SwiftUI-based iOS app implements a grid-based pathfinding application that allows users to generate random mazes using different maze generator algorithms and find the shortest path through the maze using different search algorithms. The app follows the MVVM architecture to manage the data and UI separation effectively.
+This SwiftUI-based iOS app implements a grid-based pathfinding application that allows users to generate random mazes and find the shortest path through the maze using different search algorithms. The app follows the MVVM architecture to manage the data and UI separation effectively.
 
 ## Features
 
-- Generate Random Maze: The app uses different algorithms like DFS(BackTracking) to generate a random maze on a grid. Users can adjust teh shape of the maze.
+- Three different Grids: No Maze/Unweigt Maze/Weight Maze
+- Generate Random Maze: The app uses DFS(BackTracking) to generate a random maze on a grid.
 - Find Shortest Path: Users can select different algorithms like Dijkstra to find the shortest path between any two points in the gird.
 - Visual Representation: The app provides an interactive grid-based visual representation of the maze and the shortest path, making it easy for users to understand the process.
 
@@ -26,27 +27,27 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dijkstra.gif" alt="GIF 1" width="133">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dijkstra.gif" alt="GIF 1">
       <br>
       Dijkstra
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/astar.gif" alt="GIF 2" width="133">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/astar.gif" alt="GIF 2" >
       <br>
       A-Star
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/greedy.gif" alt="GIF 3" width="133">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/greedy.gif" alt="GIF 3" >
       <br>
       Greedy
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/bfs.gif" alt="GIF 4" width="133">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/bfs.gif" alt="GIF 4">
       <br>
       BFS
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dfs.gif" alt="GIF 5" width="133">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dfs.gif" alt="GIF 5">
       <br>
       DFS
     </td>
@@ -117,24 +118,27 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
   </tr>
 </table>
 
-
-
-
 ## Shortest Path Finding (AlgoSearch)
 
-### Breadth-First Search (BFS) Algorithm - Unweighted/Guarantee shortest path
-
-The Breadth-First Search algorithm is used for finding the shortest path through the generated maze. BFS is a graph traversal algorithm that explores all the vertices at the current depth level before moving to the next level. In the context of the maze grid, BFS starts from the selected starting point and explores neighboring cells level by level until the destination point is reached. This guarantees that the first path found is the shortest one, making it ideal for pathfinding in unweighted graphs like the maze grid.
-
 ### Dijkstra's Algorithm - Weighted/Guarantee shortest path
-
+Able to find all shortest paths to every node in grid
 Reference: https://builtin.com/software-engineering-perspectives/dijkstras-algorithm
 
-### A Search - Weighted/Guarantee shortest path
-
+### A-Star Search - Weighted/Guarantee shortest path
+Arguably the best pathfinding algorithm, f = g + h, uses heuristics to guarantee the shortest path much faster than Dijkstra's Algorithm.
+Need to know the location of Start and Target node. 
 Reference: https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2
 
 ### Greedy Best-First Search - Weighted/Not guarantee shortest path
+A faster, more heuristic-heavy version of A-Star
+Does not guarantee the shortest path
+
+### Breadth-First Search (BFS) Algorithm - Unweighted/Guarantee shortest path
+Able to find the shorest path, need count the distance to start node while searching
+cannot be used in weight graph. If weight == 1, Dijkstra and BFS are the same.
+
+### Breadth-First Search (BFS) Algorithm - Unweighted/Not guarantee shortest path
+So bad, not use it.
 
 
 ## Maze Generation (AlgoMaze)
