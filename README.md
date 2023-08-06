@@ -21,37 +21,102 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 
 ## Demo
 
-###No maze
+### No Maze
 
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 1">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dijkstra.gif" alt="GIF 1">
       <br>
-      GIF 1
+      Dijkstra
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 2">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/astar.gif" alt="GIF 2">
       <br>
-      GIF 2
+      A-Star
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 3">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/greedy.gif" alt="GIF 3">
       <br>
-      GIF 3
+      Greedy
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 4">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/bfs.gif" alt="GIF 4">
       <br>
-      GIF 4
+      BFS
     </td>
     <td align="center">
-      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 5">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/noMaze/dfs.gif" alt="GIF 5">
       <br>
-      GIF 5
+      DFS
     </td>
   </tr>
 </table>
+
+### Maze(Unweight)
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/dij.gif" alt="GIF 1">
+      <br>
+      Dijkstra
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/astar.gif" alt="GIF 2">
+      <br>
+      A-Star
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/greedy.gif" alt="GIF 3">
+      <br>
+      Greedy
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/bfs.gif" alt="GIF 4">
+      <br>
+      BFS
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/dfs.gif" alt="GIF 5">
+      <br>
+      DFS
+    </td>
+  </tr>
+</table>
+
+### Maze(Weight)
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/weightMaze/dijksrta.gif" alt="GIF 1">
+      <br>
+      Dijkstra
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/weightMaze/astar.gif" alt="GIF 2">
+      <br>
+      A-Star
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/weightMaze/greedy.gif" alt="GIF 3">
+      <br>
+      Greedy
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/weightMaze/bfs.gif" alt="GIF 4">
+      <br>
+      BFS
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/weightMaze/dfs.gif" alt="GIF 5">
+      <br>
+      DFS
+    </td>
+  </tr>
+</table>
+
 
 
 
@@ -87,7 +152,9 @@ Reference: https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7
     2. Remove the wall between the current cell and the chosen cell
     
     3. Invoke the routine recursively for the chosen cell
-    
+
+ 
+![Generate Maze randomly](https://github.com/jli943/MazePathFinder/blob/main/Photos/unweightMaze/mazeGenerate.gif)   
 Reference: https://en.wikipedia.org/wiki/Maze_generation_algorithm
 
 
