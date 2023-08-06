@@ -74,7 +74,7 @@ struct MazePathFinder: View {
                                 .foregroundColor(.white)
                                 .font(Font.system(size: 14).weight(.bold))
                         }
-                        .padding(12)
+                        .padding(6)
                         .font(.title)
                         .background(.green)
                         .cornerRadius(8)
@@ -114,7 +114,7 @@ struct MazePathFinder: View {
                         .font(.title)
                         .bold()
                     Spacer()
-                    Text("ShorPath: \(viewModel.grid.shortPath)")
+                    Text("ShortPath: \(viewModel.grid.shortPath)")
                         .font(.title)
                         .bold()
                     Spacer()

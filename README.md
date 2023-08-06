@@ -13,13 +13,46 @@ This SwiftUI-based iOS app implements a grid-based pathfinding application that 
 
 The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage the data and user interface separation. The key components of the MVVM architecture include:
 
-1. Model: Represents the data and business logic of the application. In this app, it includes the structure of Node/Grid/AlgoMaze/AlgoSearch
+1. Model: Represents the data and business logic of the application. In this app, it includes the structure and logic of Node/Grid/AlgoMaze/AlgoSearch
 
 2. View: Represents the user interface. SwiftUI views are used to create the visual elements and layout of the app. In this app, it includes the UI of Grid and different Buttons.
 
-3. ViewModel: Acts as an intermediary between the Model and the View. It holds the app's state and data that needs to be displayed on the UI. It also communicates with the Model to fetch data and update it based on user interactions. In this app, it includes ViewModel of Grid/Details of AlgoMaze/Details of AlgoSearch.
+3. ViewModel: Acts as an intermediary between the Model and the View. It holds the app's state and data that needs to be displayed on the UI. It also communicates with the Model to fetch data and update it based on user interactions. 
 
 ## Demo
+
+###No maze
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 1">
+      <br>
+      GIF 1
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 2">
+      <br>
+      GIF 2
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 3">
+      <br>
+      GIF 3
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 4">
+      <br>
+      GIF 4
+    </td>
+    <td align="center">
+      <img src="https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif" alt="GIF 5">
+      <br>
+      GIF 5
+    </td>
+  </tr>
+</table>
+
 
 ![MazePathFinder Demo](https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif)
 

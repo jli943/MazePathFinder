@@ -29,7 +29,6 @@
 		66E9CA042A7B448900518F52 /* MazeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9CA032A7B448900518F52 /* MazeGenerator.swift */; };
 		66E9CA062A7B44C600518F52 /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9CA052A7B44C600518F52 /* BackTracking.swift */; };
 		66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AC2A7746E10055F343 /* Maze.swift */; };
-		66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +55,6 @@
 		66E9CA032A7B448900518F52 /* MazeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeGenerator.swift; sourceTree = "<group>"; };
 		66E9CA052A7B44C600518F52 /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
 		66FEE7AC2A7746E10055F343 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
-		66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				66D343CE2A72ECAD00743311 /* ViewModel.swift */,
-				66FEE7AE2A77480B0055F343 /* MazeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 				66E9CA062A7B44C600518F52 /* BackTracking.swift in Sources */,
 				66D343CF2A72ECAD00743311 /* ViewModel.swift in Sources */,
 				66FEE7AD2A7746E10055F343 /* Maze.swift in Sources */,
-				66FEE7AF2A77480B0055F343 /* MazeViewModel.swift in Sources */,
 				66E9CA022A7B441800518F52 /* Bfs.swift in Sources */,
 				66E5CFBC2A79DFA900C815BC /* MinHeap.swift in Sources */,
 				66D343CB2A72EC3D00743311 /* Node.swift in Sources */,
