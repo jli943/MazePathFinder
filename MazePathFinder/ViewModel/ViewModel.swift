@@ -16,8 +16,8 @@ class ViewModel: ObservableObject{
     @Published var algorithm: Algorithm?
     @Published var maze: Maze?
     
-    let algoritrhmsMenu:[Algorithm] = [.bfs, .dij, .dfs, .astar,.greedy]
-    let mazeMenu:[Maze] = [.unweightMaze, .weightMaze]
+    let algoritrhmsMenu:[Algorithm] = [.dij, .astar,.greedy, .bfs, .dfs]
+    let mazeMenu:[Maze] = [.weightMaze, .unweightMaze]
     
     func ResetGraph(){
         grid.resetGrid()
@@ -58,6 +58,7 @@ class ViewModel: ObservableObject{
         case .none:
             break
         }
+        grid.searchNodeCount()
     }
     
     func findShortestWay(){
@@ -75,6 +76,15 @@ class ViewModel: ObservableObject{
         case .none:
             break
         }
+        grid.shortPathCount()
+    }
+    
+    func updateSearchNodeCount(){
+        grid.searchNodeCount()
+    }
+    
+    func updateShortPathCount(){
+        grid.shortPathCount()
     }
     
 }

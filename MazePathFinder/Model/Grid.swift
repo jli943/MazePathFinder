@@ -15,6 +15,8 @@ struct Grid {
     var cells: [[Node]]
     var barrierCoords:Set<Coordinate> = []
     var weightCoords:Set<Coordinate> = []
+    var searchNode:Int = 0
+    var shortPath: Int = 0
     
     init(row: Int, col: Int) {
         rowNumber = row
@@ -83,6 +85,8 @@ struct Grid {
         }
         barrierCoords = []
         weightCoords = []
+        searchNode = 0
+        shortPath = 0
     }
     
     mutating func resetSearch(){
@@ -94,6 +98,8 @@ struct Grid {
                 cells[x][y].heuristic = nil
             }
         }
+        searchNode = 0
+        shortPath = 0
     }
     
     mutating func resetMaze(){
@@ -106,5 +112,31 @@ struct Grid {
         
         barrierCoords = []
         weightCoords = []
+        searchNode = 0
+        shortPath = 0
+    }
+    
+    mutating func searchNodeCount(){
+        searchNode = 0
+        shortPath = 0
+        for x in 0..<rowNumber{
+            for y in 0..<colNumber{
+                if cells[x][y].distance != nil{
+                    searchNode += cells[x][y].weight
+                }
+            }
+        }
+    }
+    
+    mutating func shortPathCount(){
+        shortPath = 0
+        for x in 0..<rowNumber{
+            for y in 0..<colNumber{
+                if cells[x][y].onPath{
+                    shortPath+=cells[x][y].weight
+                }
+            }
+        }
+        
     }
 }
