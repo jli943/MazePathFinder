@@ -54,7 +54,6 @@ The app follows the Model-View-ViewModel (MVVM) architectural pattern to manage 
 </table>
 
 
-![MazePathFinder Demo](https://github.com/jli943/MazePathFinder/blob/main/Photos/Demo.gif)
 
 ## Shortest Path Finding (AlgoSearch)
 
